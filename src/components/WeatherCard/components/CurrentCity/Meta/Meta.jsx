@@ -4,25 +4,24 @@ import pm from '../../../../../assets/meta_icon/PM2.5.svg'
 import somaTemp from '../../../../../assets/meta_icon/Somatosensory_temperature.svg'
 import windSpeed from '../../../../../assets/meta_icon/wind_speed.svg'
 
-export default function Meta({className}) {
-  const liClassName = ''
+export default function Meta({ className, weatherData }) {
   return (
     <ul className={className}>
-      <li className={liClassName}>
-        <img src={humidity} alt="humidity" />
-        <span>85%</span>
+      <li>
+        <img src={humidity} alt='humidity' />
+        <span>{weatherData.current.humidity}%</span>
       </li>
-      <li className={liClassName}>
-        <img src={windSpeed} alt="Wind speed" />
-        <span>9km/h</span>
+      <li>
+        <img className='ml-3' src={windSpeed} alt='Wind speed' />
+        <span>{Math.round(weatherData.current.wind_kph)}km/h</span>
       </li>
-      <li className={liClassName}>
-      <img src={pm} alt="pm2.5" />
-      <span>75</span>
+      <li>
+        <img src={pm} alt='pm2.5' />
+        <span>{Math.round(weatherData.current.air_quality.pm2_5)}μg</span>
       </li>
-      <li className={liClassName}>
-        <img src={somaTemp} alt="Somatosensory temperature" />
-        <span>26°</span>
+      <li>
+        <img src={somaTemp} alt='Somatosensory temperature' />
+        <span>{Math.round(weatherData.current.feelslike_c)}°</span>
       </li>
     </ul>
   )
