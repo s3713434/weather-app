@@ -33,7 +33,7 @@ export default function WeatherCard() {
     <div className='bg-indigo-50 p-6 shadow-lg rounded-3xl flex space-x-10 min-w-max border-box'>
       <CurrentCity weatherData={weatherData} />
       <div className='flex flex-col align-center w-full'>
-        <Forecast />
+        <Forecast weatherData={weatherData} />
         <SearchBar />
         <OtherCities />
       </div>
