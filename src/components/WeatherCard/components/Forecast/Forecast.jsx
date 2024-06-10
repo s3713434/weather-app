@@ -14,19 +14,45 @@ export default function Forecast({ weatherData }) {
 
   return (
     <ul className='flex w-full text-center my-10 space-x-14 text-indigo-950'>
-      {nextFourDays.map((day, index) => (
-        <li key={index}>
-          <h2 className='text-2xl font-semibold'>
-            {new Date(day.date).toLocaleDateString('en-US', {
-              weekday: 'long',
-            })}
-          </h2>
-          <img className='size-40' src={rain} alt={rain} />
-          <p>
-            {Math.round(day.day.mintemp_c)} ~ {Math.round(day.day.maxtemp_c)}°
-          </p>
-        </li>
-      ))}
+      {nextFourDays.map((day, index) => {
+        const icons = day.day.condition.text.toLowerCase()
+        let res = null
+        if (icons.includes('sunny')) {
+          res = sunny
+        }
+        if (icons.includes('partly cloudy')) {
+          res = cloudyDay
+        }
+        if (icons.includes('cloudy')) {
+          res = cloudy
+        }
+        if (icons.includes('snow')) {
+          res = snow
+        }
+        if (icons.includes('ice')) {
+          res = hail
+        }
+        if (icons.includes('rain')) {
+          res = rain
+        }
+
+        return (
+          <li key={index}>
+            <h2 className='text-2xl font-semibold'>
+              {new Date(day.date).toLocaleDateString('en-US', {
+                weekday: 'long',
+              })}
+              {/* {console.log(day.date)} */}
+            </h2>
+            <img className='size-40' src={res} alt={icons} />
+            <p>
+              {Math.round(day.day.mintemp_c)} ~ {Math.round(day.day.maxtemp_c)}°
+              {/* {console.log(day.day)} */}
+              {/* {console.log(icons)} */}
+            </p>
+          </li>
+        )
+      })}
     </ul>
   )
 }
