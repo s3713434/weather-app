@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        alimama: ['AlimamaFangYuanTiVF-Square', 'helvetica'],
+        'alimama': ['AlimamaFangYuanTiVF-Square', 'helvetica'],
       },
     },
   },

@@ -13,7 +13,7 @@ export default function Forecast() {
   const month = dateTime.toLocaleString('en-US', { month: 'long' });
   const weekday = dateTime.toLocaleString('en-US', { weekday: 'long' });
   return (
-    <ul className='flex w-full text-center my-10 space-x-10'>
+    <ul className='flex w-full text-center my-10 space-x-14'>
       <li>
         <h2 className='text-2xl font-semibold'>{weekday}</h2>
         <p>Days</p>

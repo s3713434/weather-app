@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'AlimamaFangYuanTiVF-Square';
+  font-family: 'alimama';
   src: url('./assets/fonts/AlimamaFangYuanTiVF-Thin.woff') format('woff'),
         url('./assets/fonts/AlimamaFangYuanTiVF-Thin.woff2') format('woff'),
+}
+
+body {
+  font-family: 'alimama', sans-serif;
 }
