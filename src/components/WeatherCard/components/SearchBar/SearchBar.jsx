@@ -15,7 +15,7 @@ export default function SearchBar({ onSearch }) {
   }
 
   return (
-    <div className='bg-white p-1 w-3/5 flex space-x-1 rounded-2xl mt-20'>
+    <div className='bg-white p-1 w-3/5 flex space-x-1 rounded-2xl mt-24 '>
       <input
         className='w-full p-2 outline-none'
         type='text'

@@ -30,7 +30,7 @@ export default function WeatherCard() {
       try {
         if (city) {
           setLoading(true)
-          await getWeather(city, setWeatherData)
+          await getWeather(city)
           setLoading(false)
         }
       } catch (error) {
@@ -47,7 +47,7 @@ export default function WeatherCard() {
       <div role='status'>
         <svg
           aria-hidden='true'
-          className='inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-purple-600'
+          className='inline w-20 h-20 text-gray-200 animate-spin dark:text-gray-600 fill-purple-600'
           viewBox='0 0 100 101'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
@@ -71,12 +71,12 @@ export default function WeatherCard() {
   }
 
   return (
-    <div className='bg-indigo-50 p-6 shadow-lg rounded-3xl flex space-x-10 min-w-max border-box'>
+    <div className='bg-indigo-50 p-6 shadow-lg rounded-3xl flex space-x-10 border-box'>
       <CurrentCity weatherData={weatherData} />
       <div className='flex flex-col align-center w-full'>
         <Forecast weatherData={weatherData} />
         <SearchBar onSearch={onSearch} />
-        <OtherCities />
+        <OtherCities weatherData={weatherData} />
       </div>
     </div>
   )
