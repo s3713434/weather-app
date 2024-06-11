@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { React } from 'react'
 import cloudy from '../../../../assets/weather_icon/Cloudy.png'
 import cloudyDay from '../../../../assets/weather_icon/Cloudy_day.png'
 import hail from '../../../../assets/weather_icon/Hail.png'

@@ -1,4 +1,3 @@
-import logo from './logo.svg'
 import './App.css'
 import BackgroundImage from './components/BackgroundImage'
 import WeatherCard from './components/WeatherCard'
