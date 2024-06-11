@@ -24,7 +24,7 @@ export default function CurrentCity({ weatherData }) {
           className={'text-white text-center justify-center items-center'}
           weatherData={weatherData}
         />
-        <Icon className={'mb-10'} />
+        <Icon className={'mb-10'} weatherData={weatherData} />
         <Meta
           className={
             'flex justify-center items-center text-center bg-white rounded-2xl px-6 py-5 space-x-9 text-indigo-950'

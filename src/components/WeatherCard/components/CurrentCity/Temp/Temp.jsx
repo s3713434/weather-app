@@ -12,7 +12,7 @@ export default function Temp({ className, weatherData }) {
         {Math.round(weatherData.current.temp_c)}°
       </p>
       <p>
-        {Math.round(todayForecast.day.mintemp_c)} ~ 
+        {Math.round(todayForecast.day.mintemp_c)} ~
         {' ' + Math.round(todayForecast.day.maxtemp_c)}°
       </p>
     </div>
