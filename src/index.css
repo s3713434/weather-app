@@ -8,6 +8,12 @@
         url('./assets/fonts/AlimamaFangYuanTiVF-Thin.woff2') format('woff'),
 }
 
+@layer utilities {
+  .height-auto {
+    @apply h-auto;
+  }
+}
+
 body {
   font-family: 'alimama', sans-serif;
 }
